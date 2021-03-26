@@ -1,0 +1,10 @@
+1616768708864|23|2|Rafael Coss|105|Saint Louis to Memphis|37.47485808497102|-89.71435546875|84|Normal|0|0|0|51                                                          
+1616768708865|18|4|Ana Castro|107|Springfield to Kansas City Via Columbia|38.831149809348744|-90.791015625|75|Normal|0|0|1|52                                           
+1616768708902|27|1|Edgar Orendain|108|Springfield to Kansas City Via Hanibal|39.7240885773337|-90.24169921875|75|Normal|0|0|0|48                                        
+1616768708952|49|3|James Medel|106|Saint Louis to Tulsa|38.46219172306828|-90.85693359375|51|Normal|0|0|1|49                                                            
+1616768709794|6|8|Robert Molina|101|Joplin to Kansas City|38.33303882235456|-94.3505859375|51|Normal|0|0|0|52                                                           
+1616768709832|10|6|Robert Hryniewicz|103|Peoria to Cedar Rapids|41.72213058512578|-91.0546875|61|Normal|1|0|0|53                                                        
+1616768709852|25|5|George De Leon|104|Saint Louis to Chicago|41.11246878918085|-88.41796875|57|Normal|1|0|0|48                                                          
+1616768709871|4|7|Mushtaq Rizvi|102|Memphis to Little Rock|34.831841149828676|-91.38427734375|63|Normal|0|0|1|51                                                        
+1616768709873|18|4|Ana Castro|107|Springfield to Kansas City Via Columbia|38.8225909761771|-90.933837890625|73|Normal|0|0|0|51                                          
+1616768709881|23|2|Rafael Coss|105|Saint Louis to Memphis|37.19533058280065|-89.560546875|82|Normal|0|0|0|50                                                            
