@@ -19,34 +19,35 @@ fs.readFile("./Data_Batch.txt", {encoding:"utf8"},(err, data) => {
   data.split('\n').forEach(line => {
     // then separate all values of the line
     const parsedLine = line.split('|');
-    // construct the driver
-    const currentDriver:Driver = {
-      truckId: parseInt(parsedLine[1]),
-      driverId: parseInt(parsedLine[2]),
-      driverName: parsedLine[3],
-      events: [],
-      active: true
-    }
+    // get the driver ID
+    const currentDriverId = Number(parsedLine[2]);
     // construct the event
-    const event:DriverEvent={
-      eventTime: new Date(parseInt(parsedLine[0])),
-      routeId: parseInt(parsedLine[4]),
+    const event:DriverEvent = {
+      eventTime: new Date(Number(parsedLine[0])),
+      routeId: Number(parsedLine[4]),
       routeName: parsedLine[5],
       pos: {
-        lat: parseFloat(parsedLine[6]),
-        lng: parseFloat(parsedLine[7])
+        lat: Number(parsedLine[6]),
+        lng: Number(parsedLine[7])
       },
-      speed: parseInt(parsedLine[8]),
+      speed: Number(parsedLine[8]),
       eventType: parsedLine[9],
       foggy: parsedLine[10] == "1",
       rainy: parsedLine[11] == "1",
       windy: parsedLine[12] == "1",
-      congestionLevel: parseInt(parsedLine[13])
+      congestionLevel: Number(parsedLine[13])
     }
     // if their already exist a driver with the same name
     // push the event to its event array
-    if(!Data.find(driver => driver.driverId === currentDriver.driverId)?.events.push(event)) {
-      // else push the event to the current driver event array
+    if(!Data.find(driver => driver.driverId == currentDriverId)?.events.push(event)) {
+      //else construct the driver
+      const currentDriver:Driver = {
+        truckId: Number(parsedLine[1]),
+        driverId: currentDriverId,
+        driverName: parsedLine[3],
+        events: []
+      }
+      // push the event to the current driver event array
       currentDriver.events.push(event);
       // and push the driver to main array
       Data.push(currentDriver);
