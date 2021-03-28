@@ -23,7 +23,7 @@ fs.readFile("./Data_Batch.txt", {encoding:"utf8"},(err, data) => {
     const currentDriverId = Number(parsedLine[2]);
     // construct the event
     const event:DriverEvent = {
-      eventTime: new Date(Number(parsedLine[0])),
+      eventTime: Number(parsedLine[0]),
       routeId: Number(parsedLine[4]),
       routeName: parsedLine[5],
       pos: {
@@ -55,7 +55,7 @@ fs.readFile("./Data_Batch.txt", {encoding:"utf8"},(err, data) => {
   })
   // for each driver sort the event in inverse chronology
   // driver.event[0] must be most recent
-  Data.forEach(driver =>  driver.events.sort((a,b) => b.eventTime.getTime() - a.eventTime.getTime()))
+  Data.forEach(driver =>  driver.events.sort((a,b) => b.eventTime - a.eventTime))
   // then write main array to a json file
   fs.writeFile("./data.json", JSON.stringify(Data), err => {
     if(err) {

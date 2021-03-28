@@ -4,7 +4,7 @@ export declare interface Position {
 }
 
 export declare interface DriverEvent {
-    eventTime: Date,
+    eventTime:number,
     routeId:number,
     routeName:string,
     pos:Position,
