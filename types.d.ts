@@ -1,9 +1,9 @@
-export declare interface Position {
+declare interface Position {
     lat:number,
     lng:number
 }
 
-export declare interface DriverEvent {
+declare interface DriverEvent {
     eventTime:number,
     routeId:number,
     routeName:string,
@@ -16,7 +16,7 @@ export declare interface DriverEvent {
     congestionLevel:number
 }
 
-export declare interface Driver {
+declare interface Driver {
     truckId:number,
     driverId:number,
     driverName:string,

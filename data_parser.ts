@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import {Driver, DriverEvent} from './type'
 
 // array of driver, to be filled with the txt file
 const Data:Driver[] = [];
